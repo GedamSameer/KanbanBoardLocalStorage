@@ -1,0 +1,163 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+header{
+    height: 10rem;
+    background-color: darkgray;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.priority-cont{
+    width: 20rem;
+    background-color: black;
+    height: 5rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 4px;
+}
+.color{
+    height: 3.5rem;
+    width: 3.5rem;
+    border-radius: 3px;
+    color: black;
+    font-size: large; 
+    font-weight: bold;
+    border: 2px solid black;
+    
+}
+.color:hover{
+    border: 2px solid white;
+}
+.pink{
+    background-color: lightpink;
+}
+.blue{
+    background-color: lightblue;
+}
+.green{
+    background-color: lightgreen;
+}
+.orange{
+    background-color: orange;
+}
+.btn-cont{
+    width: 10rem;
+    height: 5rem;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+}
+
+.btn-cont > button{
+    height: 4.5rem;
+    width: 4.8rem;
+    font-size: 2rem;
+    border-radius: 4px;
+    background-color: white;
+
+}
+.btn-cont > button :hover{
+    height: 100%;
+    width: 100%;
+    background-color: lightgrey;
+}
+main{
+    display: flex;
+    justify-content: start;
+    padding: 2rem;
+    gap: 2rem;
+}
+.ticket-cont{
+    display: block  ;
+    position: relative;
+    width: 10rem;
+}
+.ticket-color{
+    height: 2rem;
+}
+.ticket-id{
+    height: 2rem;
+    background-color: yellow;
+    padding-top: 0.4rem;
+    text-align: center;
+}
+.ticket-text{
+    padding: 1rem;
+    height: 10rem;
+    background-color: antiquewhite;
+}
+.ticket-lock{
+    position: absolute;
+    bottom: 0.5rem;
+    right: 0.7rem;
+}
+.modal{
+    position: fixed;
+    display: none;
+    border: 1px solid black;
+    height: 30rem;
+    width: 50rem;
+    top: 15rem;
+    left: 10rem;
+    z-index: 1;
+}
+.contents{
+    width: 80%;
+    background-color: beige;
+    position: relative;
+}
+.priority{
+    width: 20%;
+    background-color: azure;
+    justify-items: center;
+    align-content: center;
+}
+.text{
+    padding-top: 10%;
+    padding-left: 10%;
+    background-color: inherit;
+    height: 100% !important;
+    width: 100% !important;
+    font-size: large;
+}
+.btn >  button{
+    width: 10rem;
+    height: 5rem;
+    border-radius: 5rem;
+    font-weight: bold;
+    color: white;
+    font-size: large;
+}
+.btn{
+    position: absolute;
+    bottom: 2rem;
+    left: 10rem;
+}
+.close{
+    background-color: red;
+}
+.close:hover{
+    background-color: rgb(255, 175, 47);
+}
+.submit{
+    background-color: green;
+}
+.submit:hover{
+    background-color: rgb(47, 255, 71);
+}
+.active{
+    border: 4px solid darkblue;
+}
+.select{
+    border: 4px solid white;
+}
