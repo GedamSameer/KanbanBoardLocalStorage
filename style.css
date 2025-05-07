@@ -1,163 +1,198 @@
+/* Reset & Base Styles */
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
+}  
 body{
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f8;
+    color: #333;
+    padding: 1rem;
 }
+/* Header */
 header{
-    height: 10rem;
-    background-color: darkgray;
-    border-radius: 10px;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
-}
-.priority-cont{
-    width: 20rem;
-    background-color: black;
-    height: 5rem;
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    flex-wrap: wrap;
+    gap: 1rem;
+}  
+.priority-cont, .btn-cont{
     display: flex;
-    justify-content: space-evenly;
+    gap: 0.75rem;
     align-items: center;
-    border-radius: 4px;
 }
 .color{
-    height: 3.5rem;
-    width: 3.5rem;
-    border-radius: 3px;
-    color: black;
-    font-size: large; 
-    font-weight: bold;
-    border: 2px solid black;
-    
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: 0.2s ease;
 }
 .color:hover{
-    border: 2px solid white;
+    border-color: #666;
 }
-.pink{
-    background-color: lightpink;
-}
-.blue{
-    background-color: lightblue;
-}
-.green{
-    background-color: lightgreen;
-}
-.orange{
-    background-color: orange;
-}
-.btn-cont{
-    width: 10rem;
-    height: 5rem;
-    background-color: black;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 4px;
-}
-
-.btn-cont > button{
-    height: 4.5rem;
-    width: 4.8rem;
-    font-size: 2rem;
-    border-radius: 4px;
-    background-color: white;
-
-}
-.btn-cont > button :hover{
-    height: 100%;
-    width: 100%;
-    background-color: lightgrey;
-}
-main{
-    display: flex;
-    justify-content: start;
-    padding: 2rem;
-    gap: 2rem;
-}
-.ticket-cont{
-    display: block  ;
-    position: relative;
-    width: 10rem;
-}
-.ticket-color{
-    height: 2rem;
-}
-.ticket-id{
-    height: 2rem;
-    background-color: yellow;
-    padding-top: 0.4rem;
-    text-align: center;
-}
-.ticket-text{
-    padding: 1rem;
-    height: 10rem;
-    background-color: antiquewhite;
-}
-.ticket-lock{
-    position: absolute;
-    bottom: 0.5rem;
-    right: 0.7rem;
-}
-.modal{
-    position: fixed;
-    display: none;
-    border: 1px solid black;
-    height: 30rem;
-    width: 50rem;
-    top: 15rem;
-    left: 10rem;
-    z-index: 1;
-}
-.contents{
-    width: 80%;
-    background-color: beige;
-    position: relative;
-}
-.priority{
-    width: 20%;
-    background-color: azure;
-    justify-items: center;
-    align-content: center;
-}
-.text{
-    padding-top: 10%;
-    padding-left: 10%;
-    background-color: inherit;
-    height: 100% !important;
-    width: 100% !important;
-    font-size: large;
-}
-.btn >  button{
-    width: 10rem;
-    height: 5rem;
-    border-radius: 5rem;
+.pink{ background-color: #ffadbc; }
+.blue{ background-color: #add8e6; }
+.green{ background-color: #a0e7a0; }
+.orange{ background-color: #ffcc80; }
+.all.color{
+    width: auto;
+    padding: 0 10px;
     font-weight: bold;
+    background-color: #ddd;
+    border-radius: 6px;
+}  
+/* Buttons */
+.btn-cont button{
+    background-color: #007bff;
+    border: none;
     color: white;
-    font-size: large;
+    font-size: 1.2rem;
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.2s ease;
 }
-.btn{
+.btn-cont button:hover {
+    background-color: #0056b3;
+}
+/* Divider */
+.divider {
+    width: 1px;
+    height: 40px;
+    background-color: #ccc;
+}
+/* Main Ticket Area */
+main {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+/* Ticket */
+.ticket-cont {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 200px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+.ticket-color {
+    height: 10px;
+}
+.ticket-id {
+    background-color: #f5f5dc;
+    padding: 0.5rem;
+    text-align: center;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+.ticket-text {
+    padding: 1rem;
+    font-size: 0.95rem;
+    flex-grow: 1;
+    background-color: #fafafa;
+    overflow-wrap: break-word;
+}
+.ticket-lock {
     position: absolute;
-    bottom: 2rem;
-    left: 10rem;
+    bottom: 10px;
+    right: 10px;
+    font-size: 1rem;
+    color: #555;
+    cursor: pointer;
 }
-.close{
-    background-color: red;
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 600px;
+    height: 400px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+    overflow: hidden;
+    flex-direction: row;
 }
-.close:hover{
-    background-color: rgb(255, 175, 47);
+/* Modal Content */
+.contents {
+    width: 70%;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    background-color: #f9f9f9;
 }
-.submit{
-    background-color: green;
+.priority {
+    width: 30%;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    background-color: #eaf4ff;
+    justify-content: center;
+    align-items: center;
 }
-.submit:hover{
-    background-color: rgb(47, 255, 71);
+textarea.text {
+    flex-grow: 1;
+    resize: none;
+    padding: 1rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    background-color: white;
 }
-.active{
-    border: 4px solid darkblue;
+.btn {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 1rem;
 }
-.select{
-    border: 4px solid white;
+.btn > button {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 30px;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    color: white;
+    transition: 0.2s ease;
+}
+.close { background-color: #dc3545; }
+.submit { background-color: #28a745; } 
+.close:hover { background-color: #ff6b6b; }
+.submit:hover { background-color: #66ff66; }
+/* Active/Select Styles */
+.active {
+    border: 3px solid #000;
+}  
+.select {
+    border: 3px solid #000;
+}
+/* Responsive */
+@media (max-width: 600px) {
+    header {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .modal {
+      flex-direction: column;
+      height: auto;
+    }
+    .contents, .priority {
+      width: 100%;
+    }
 }
